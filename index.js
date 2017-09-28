@@ -3,9 +3,9 @@ const request = require('request');
 const myJsonApiUrlRoot = "https://api.myjson.com"
 
 /**
-  * The get function returns the JSON object associated with the bin id.
-  * @param {string} binId - the id of the bin you want to get the JSON for.
-*/
+ * The get function returns the JSON object associated with the bin id.
+ * @param {string} binId - the id of the bin you want to get the JSON for.
+ */
 
 module.exports.get = function(binId){
   return new Promise( (resolve,reject) => {
