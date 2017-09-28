@@ -29,7 +29,7 @@ The get function returns the JSON object associated with the bin id.
 
 <a name="create"></a>
 
-## create() ⇒ <code>string</code>
+## create()
 The create function creates a new myJSON bin(object).
 Returns to you the ID of the bin that was
 

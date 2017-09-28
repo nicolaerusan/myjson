@@ -29,8 +29,7 @@ module.exports.get = function(binId){
 
 /**
   * The create function creates a new myJSON bin(object).
-  * Returns to you the ID of the bin that was
-  * @returns {string} binId - the id of the MyJSON bin(object) that was created
+  * Returns to you the ID of the bin that was  
 */
 module.exports.create = function(jsonObject){
   return new Promise( (resolve,reject) => {
