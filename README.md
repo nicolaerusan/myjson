@@ -31,8 +31,8 @@ myJsonAPI.update({binId, JSON})
 
 ```
 
-
-
+You can also try it out here via a Clay function:
+https://www.clay.run/services/nicoslepicos/my-json-demo
 
 
 ## Functions
