@@ -1,13 +1,47 @@
 # Overview
 This is a simple wrapper for MyJSON.com the simple JSON store for your web or mobile app: [http://myjson.com/](http://myjson.com/)
 
+It has a Promise based syntax
+
+```
+npm install myjson
+```
+
+Then use it like this:
+
+
+```
+const myJsonAPI = require('myjson');
+
+// Create a JSON object:
+myJsonAPI.create({newBucketName:"New Bucket", counter: 0})
+	.then((response) => console.log({id:response.id, uri:response.uri}))
+    .error(() => )
+    
+// Get a JSON object:
+myJsonAPI.get({binId})
+	.then((json) => console.log(json))
+    .error(() => )
+
+
+// Get a JSON object:
+myJsonAPI.update({binId, JSON})
+	.then((updatedJSON) => console.log(updatedJSON)
+    .error(() => )
+
+```
+
+
+
+
+
 ## Functions
 
 <dl>
 <dt><a href="#get">get(binId)</a></dt>
 <dd><p>The get function returns the JSON object associated with the bin id.</p>
 </dd>
-<dt><a href="#create">create()</a> ⇒ <code>string</code></dt>
+<dt><a href="#create">create()</a></dt>
 <dd><p>The create function creates a new myJSON bin(object).
 Returns to you the ID of the bin that was</p>
 </dd>
@@ -18,7 +52,7 @@ Returns to you the ID of the bin that was</p>
 
 <a name="get"></a>
 
-## get(binId)
+## get(binId) => {JSON}
 The get function returns the JSON object associated with the bin id.
 
 **Kind**: global function
@@ -29,7 +63,7 @@ The get function returns the JSON object associated with the bin id.
 
 <a name="create"></a>
 
-## create()
+## create() => {id, uri}
 The create function creates a new myJSON bin(object).
 Returns to you the ID of the bin that was
 
@@ -37,7 +71,7 @@ Returns to you the ID of the bin that was
 **Returns**: <code>string</code> - binId - the id of the MyJSON bin(object) that was created
 <a name="update"></a>
 
-## update(binId, jsonObject)
+## update(binId, jsonObject) => {JSON}
 The update function allows you to update the JSON object associated with the bin id.
 
 **Kind**: global function
